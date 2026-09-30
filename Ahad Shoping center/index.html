@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHAD Clothing & Shopping Centre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== LOADER ===== -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">AHAD</div>
+            <div class="loader-bar"><div class="loader-progress"></div></div>
+            <p class="loader-text">Loading Luxury...</p>
+        </div>
+    </div>
+
+    <!-- ===== FLOATING 3D SHAPES ===== -->
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+    </div>
+
+    <!-- ===== HEADER / NAVIGATION ===== -->
+    <header id="header">
+        <nav class="navbar">
+            <a href="#home" class="nav-logo">
+                <div class="logo-icon-wrap">
+                    <img src="images/logo.jpg" alt="AHAD Brand Logo" class="brand-logo-img">
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name">AHAD</span>
+                    <span class="logo-tagline">Clothing & Shopping Centre</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="nav-btn search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+                <button class="nav-btn wishlist-btn" aria-label="Wishlist"><i class="fas fa-heart"></i><span class="badge wishlist-count">0</span></button>
+                <button class="nav-btn cart-btn" id="cartToggle" aria-label="Cart"><i class="fas fa-shopping-bag"></i><span class="badge cart-count">0</span></button>
+                <button class="nav-btn menu-btn" id="menuToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== MOBILE MENU ===== -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span class="logo-name">AHAD</span>
+            <button class="close-menu" id="closeMenu"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-particles" id="particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-3d-container">
+                <div class="hero-badge">âœ¦ NEW SEASON 2026 âœ¦</div>
+                <h1 class="hero-title">
+                    <span class="title-line title-line-1">Redefine</span>
+                    <span class="title-line title-line-2">Your <em>Style</em></span>
+                </h1>
+                <p class="hero-subtitle">Premium clothing crafted for the modern individual. Discover elegance, comfort, and unmatched quality at Ahad Clothing & Shopping Centre.</p>
+                <div class="hero-cta">
+                    <a href="#products" class="btn btn-primary">
+                        <span>Shop Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#collections" class="btn btn-outline">
+                        <span>Explore Collections</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-count="500">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Products</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="50">0</span><span class="stat-plus">K+</span>
+                        <span class="stat-label">Happy Customers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="15">0</span>
+                        <span class="stat-label">Awards</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-3d-model">
+            <div class="rotating-cube">
+                <div class="cube-face front">AHAD</div>
+                <div class="cube-face back">STYLE</div>
+                <div class="cube-face right">LUXURY</div>
+                <div class="cube-face left">CLASS</div>
+                <div class="cube-face top">2026</div>
+                <div class="cube-face bottom">â˜…</div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll Down</p>
+        </div>
+    </section>
+
+    <!-- ===== MARQUEE BANNER ===== -->
+    <div class="marquee-banner">
+        <div class="marquee-track">
+            <span>FREE SHIPPING ON ORDERS OVER PKR 10,000 âœ¦ NEW ARRIVALS WEEKLY âœ¦ PREMIUM QUALITY âœ¦ 30-DAY RETURNS âœ¦ EXCLUSIVE MEMBER DISCOUNTS âœ¦ FREE SHIPPING ON ORDERS OVER PKR 10,000 âœ¦ NEW ARRIVALS WEEKLY âœ¦ PREMIUM QUALITY âœ¦ 30-DAY RETURNS âœ¦ EXCLUSIVE MEMBER DISCOUNTS âœ¦</span>
+        </div>
+    </div>
+
+    <!-- ===== CATEGORIES / COLLECTIONS ===== -->
+    <section id="collections" class="collections">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Curated For You</span>
+                <h2 class="section-title">Our <em>Collections</em></h2>
+                <p class="section-subtitle">Explore our handpicked collections designed for every occasion</p>
+            </div>
+            <div class="collections-grid">
+                <div class="collection-card collection-large" data-category="formal">
+                    <div class="collection-bg" style="background: linear-gradient(to bottom, rgba(10,10,14,0.3) 0%, rgba(10,10,14,0.92) 100%), url('images/products/col_formal.jpg') center/cover no-repeat;"></div>
+                    <div class="card-glare"></div>
+                    <div class="collection-content">
+                        <span class="collection-tag">Atelier 2026</span>
+                        <i class="fas fa-user-tie collection-icon"></i>
+                        <h3>Formal Wear</h3>
+                        <p>Bespoke Suits, Tailored Blazers & Royal Dress Shirts</p>
+                        <a href="#products" class="collection-link">Explore Collection <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="collection-card" data-category="casual">
+                    <div class="collection-bg" style="background: linear-gradient(to bottom, rgba(10,10,14,0.3) 0%, rgba(10,10,14,0.92) 100%), url('images/products/col_casual.jpg') center/cover no-repeat;"></div>
+                    <div class="card-glare"></div>
+                    <div class="collection-content">
+                        <span class="collection-tag">Daily Elegance</span>
+                        <i class="fas fa-tshirt collection-icon"></i>
+                        <h3>Casual Wear</h3>
+                        <p>Pique Polos, Chinos & Luxury Streetwear</p>
+                        <a href="#products" class="collection-link">Explore Collection <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="collection-card" data-category="outerwear">
+                    <div class="collection-bg" style="background: linear-gradient(to bottom, rgba(10,10,14,0.3) 0%, rgba(10,10,14,0.92) 100%), url('images/products/col_outer.jpg') center/cover no-repeat;"></div>
+                    <div class="card-glare"></div>
+                    <div class="collection-content">
+                        <span class="collection-tag">All-Weather</span>
+                        <i class="fas fa-vest-patches collection-icon"></i>
+                        <h3>Outerwear</h3>
+                        <p>Leather Bombers, Wool Overcoats & Vests</p>
+                        <a href="#products" class="collection-link">Explore Collection <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="collection-card collection-wide" data-category="premium">
+                    <div class="collection-bg" style="background: linear-gradient(to bottom, rgba(10,10,14,0.3) 0%, rgba(10,10,14,0.92) 100%), url('images/products/col_prem.jpg') center/cover no-repeat;"></div>
+                    <div class="card-glare"></div>
+                    <div class="collection-content">
+                        <span class="collection-tag">Limited Edition</span>
+                        <i class="fas fa-gem collection-icon"></i>
+                        <h3>Premium Collection</h3>
+                        <p>Pure Cashmere, Handcrafted Linen & Selvedge Denim</p>
+                        <a href="#products" class="collection-link">Explore Collection <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRODUCTS SECTION ===== -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Shop The Latest</span>
+                <h2 class="section-title">Our <em>Products</em></h2>
+                <p class="section-subtitle">Handcrafted with precision, designed for perfection</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="formal">Formal</button>
+                <button class="filter-btn" data-filter="casual">Casual</button>
+                <button class="filter-btn" data-filter="outerwear">Outerwear</button>
+                <button class="filter-btn" data-filter="premium">Premium</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="formal" data-name="Classic Black Suit" data-price="83500" data-id="1" data-image="images/products/p1_suit.jpg">
+                    <div class="card-glare"></div>
+                    <div class="product-image">
+                        <div class="product-visual">
+                            <img src="images/products/p1_suit.jpg" alt="Classic Black Suit" class="product-img" loading="lazy">
+                        </div>
+                        <div class="product-badges"><span class="badge-tag new">New</span></div>
+                        <div class="product-actions-overlay">
+                            <button class="action-btn wishlist-add" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Formal Wear</span>
+                        <h3 class="product-name">Classic Black Suit</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-count">(128)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">PKR 83,500</span>
+                            <span class="original-price">PKR 111,500</span>
+                        </div>
+                        <button class="add-to-cart" data-id="1" data-name="Classic Black Suit" data-price="83500" data-image="images/products/p1_suit.jpg">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-category="outerwear" data-name="Premium Denim Jacket" data-price="49900" data-id="2" data-image="images/products/p2_denim.jpg">
+                    <div class="card-glare"></div>
+                    <div class="product-image">
+                        <div class="product-visual">
+                            <img src="images/products/p2_denim.jpg" alt="Premium Denim Jacket" class="product-img" loading="lazy">
+                        </div>
+                        <div class="product-badges"><span class="badge-tag trending">Trending</span></div>
+                        <div class="product-actions-overlay">
+                            <button class="action-btn wishlist-add" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Outerwear</span>
+                        <h3 class="product-name">Premium Denim Jacket</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-count">(95)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">PKR 49,900</span>
+                            
+                        </div>
+                        <button class="add-to-cart" data-id="2" data-name="Premium Denim Jacket" data-price="49900" data-image="images/products/p2_denim.jpg">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-category="casual" data-name="Slim Fit Chinos" data-price="21900" data-id="3" data-image="images/products/p3_chinos.jpg">
+                    <div class="card-glare"></div>
+                    <div class="product-image">
+                        <div class="product-visual">
+                            <img src="images/products/p3_chinos.jpg" alt="Slim Fit Chinos" class="product-img" loading="lazy">
+                        </div>
+                        <div class="product-badges"><span class="badge-tag sale">-25%</span></div>
+                        <div class="product-actions-overlay">
+                            <button class="action-btn wishlist-add" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Casual Wear</span>
+                        <h3 class="product-name">Slim Fit Chinos</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-count">(76)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">PKR 21,900</span>
+                            <span class="original-price">PKR 29,400</span>
+                        </div>
+                        <button class="add-to-cart" data-id="3" data-name="Slim Fit Chinos" data-price="21900" data-image="images/products/p3_chinos.jpg">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-category="casual" data-name="Oxford Button-Down Shirt" data-price="19200" data-id="4" data-image="images/products/p4_oxford.jpg">
+                    <div class="card-glare"></div>
+                    <div class="product-image">
+                        <div class="product-visual">
+                            <img src="images/products/p4_oxford.jpg" alt="Oxford Button-Down Shirt" class="product-img" loading="lazy">
+                        </div>
+                        <div class="product-badges"><span class="badge-tag new">New</span></div>
+                        <div class="product-actions-overlay">
+                            <button class="action-btn wishlist-add" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Casual Wear</span>
+                        <h3 class="product-name">Oxford Button-Down Shirt</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-count">(142)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">PKR 19,200</span>
+                            
+                        </div>
+                        <button class="add-to-cart" data-id="4" data-name="Oxford Button-Down Shirt" data-price="19200" data-image="images/products/p4_oxford.jpg">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-category="outerwear" data-name="Leather Bomber Jacket" data-price="97500" data-id="5" data-image="images/products/p5_leather.jpg">
+                    <div class="card-glare"></div>
+                    <div class="product-image">
+                        <div class="product-visual">
+                            <img src="images/products/p5_leather.jpg" alt="Leather Bomber Jacket" class="product-img" loading="lazy">
+                        </div>
+                        <div class="product-badges"><span class="badge-tag bestseller">Bestseller</span></div>
+                        <div class="product-actions-overlay">
+                            <button class="action-btn wishlist-add" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Outerwear</span>
+                        <h3 class="product-name">Leather Bomber Jacket</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-count">(210)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">PKR 97,500</span>
+                            
+                        </div>
+                        <button class="add-to-cart" data-id="5" data-name="Leather Bomber Jacket" data-price="97500" data-image="images/products/p5_leather.jpg">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-category="premium" data-name="Cashmere Sweater" data-price="72500" data-id="6" data-image="images/products/p6_cashmere.jpg">
+                    <div class="card-glare"></div>
+                    <div class="product-image">
+                        <div class="product-visual">
+                            <img src="images/products/p6_cashmere.jpg" alt="Cashmere Sweater" class="product-img" loading="lazy">
+                        </div>
+                        <div class="product-badges"><span class="badge-tag premium-tag">Premium</span></div>
+                        <div class="product-actions-overlay">
+                            <button class="action-btn wishlist-add" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Premium</span>
+                        <h3 class="product-name">Cashmere Sweater</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-count">(88)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">PKR 72,500</span>
+                            
+                        </div>
+                        <button class="add-to-cart" data-id="6" data-name="Cashmere Sweater" data-price="72500" data-image="images/products/p6_cashmere.jpg">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card" data-category="formal" data-name="Navy Tailored Blazer" data-price="69500" data-id="7" data-image="images/products/p7_blazer.jpg">
+                    <div class="card-glare"></div>
+                    <div class="product-image">
+                        <div class="product-visual">
+                            <img src="images/products/p7_blazer.jpg" alt="Navy Tailored Blazer" class="product-img" loading="lazy">
+                        </div>
+                        <div class="product-badges"><span class="badge-tag new">New</span></div>
+                        <div class="product-actions-overlay">
+                            <button class="action-btn wishlist-add" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Formal Wear</span>
+                        <h3 class="product-name">Navy Tailored Blazer</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-count">(64)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">PKR 69,500</span>
+                            <span class="original-price">PKR 89,600</span>
+                        </div>
+                        <button class="add-to-cart" data-id="7" data-name="Navy Tailored Blazer" data-price="69500" data-image="images/products/p7_blazer.jpg">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card" data-category="casual" data-name="Graphic Tee Collection" data-price="10900" data-id="8" data-image="images/products/p8_tee.jpg">
+                    <div class="card-glare"></div>
+                    <div class="product-image">
+                        <div class="product-visual">
+                            <img src="images/products/p8_tee.jpg" alt="Graphic Tee Collection" class="product-img" loading="lazy">
+                        </div>
+                        <div class="product-badges"><span class="badge-tag sale">-40%</span></div>
+                        <div class="product-actions-overlay">
+                            <button class="action-btn wishlist-add" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Casual Wear</span>
+                        <h3 class="product-name">Graphic Tee Collection</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-count">(231)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">PKR 10,900</span>
+                            <span class="original-price">PKR 18,200</span>
+                        </div>
+                        <button class="add-to-cart" data-id="8" data-name="Graphic Tee Collection" data-price="10900" data-image="images/products/p8_tee.jpg">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card" data-category="outerwear" data-name="Wool Overcoat" data-price="111500" data-id="9" data-image="images/products/p9_overcoat.jpg">
+                    <div class="card-glare"></div>
+                    <div class="product-image">
+                        <div class="product-visual">
+                            <img src="images/products/p9_overcoat.jpg" alt="Wool Overcoat" class="product-img" loading="lazy">
+                        </div>
+                        <div class="product-badges"><span class="badge-tag premium-tag">Premium</span></div>
+                        <div class="product-actions-overlay">
+                            <button class="action-btn wishlist-add" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Outerwear</span>
+                        <h3 class="product-name">Wool Overcoat</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-count">(57)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">PKR 111,500</span>
+                            
+                        </div>
+                        <button class="add-to-cart" data-id="9" data-name="Wool Overcoat" data-price="111500" data-image="images/products/p9_overcoat.jpg">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 10 -->
+                <div class="product-card" data-category="casual" data-name="Jogger Pants" data-price="19200" data-id="10" data-image="images/products/p10_joggers.jpg">
+                    <div class="card-glare"></div>
+                    <div class="product-image">
+                        <div class="product-visual">
+                            <img src="images/products/p10_joggers.jpg" alt="Jogger Pants" class="product-img" loading="lazy">
+                        </div>
+                        <div class="product-badges"><span class="badge-tag trending">Trending</span></div>
+                        <div class="product-actions-overlay">
+                            <button class="action-btn wishlist-add" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Casual Wear</span>
+                        <h3 class="product-name">Jogger Pants</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-count">(183)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">PKR 19,200</span>
+                            
+                        </div>
+                        <button class="add-to-cart" data-id="10" data-name="Jogger Pants" data-price="19200" data-image="images/products/p10_joggers.jpg">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 11 -->
+                <div class="product-card" data-category="casual" data-name="Polo Shirt" data-price="16500" data-id="11" data-image="images/products/p11_polo.jpg">
+                    <div class="card-glare"></div>
+                    <div class="product-image">
+                        <div class="product-visual">
+                            <img src="images/products/p11_polo.jpg" alt="Polo Shirt" class="product-img" loading="lazy">
+                        </div>
+                        <div class="product-badges"></div>
+                        <div class="product-actions-overlay">
+                            <button class="action-btn wishlist-add" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Casual Wear</span>
+                        <h3 class="product-name">Polo Shirt</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-count">(97)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">PKR 16,500</span>
+                            
+                        </div>
+                        <button class="add-to-cart" data-id="11" data-name="Polo Shirt" data-price="16500" data-image="images/products/p11_polo.jpg">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 12 -->
+                <div class="product-card" data-category="casual" data-name="Cargo Shorts" data-price="16500" data-id="12" data-image="images/products/p12_shorts.jpg">
+                    <div class="card-glare"></div>
+                    <div class="product-image">
+                        <div class="product-visual">
+                            <img src="images/products/p12_shorts.jpg" alt="Cargo Shorts" class="product-img" loading="lazy">
+                        </div>
+                        <div class="product-badges"><span class="badge-tag sale">-30%</span></div>
+                        <div class="product-actions-overlay">
+                            <button class="action-btn wishlist-add" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Casual Wear</span>
+                        <h3 class="product-name">Cargo Shorts</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-count">(68)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">PKR 16,500</span>
+                            <span class="original-price">PKR 23,800</span>
+                        </div>
+                        <button class="add-to-cart" data-id="12" data-name="Cargo Shorts" data-price="16500" data-image="images/products/p12_shorts.jpg">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 13 -->
+                <div class="product-card" data-category="formal" data-name="Formal Dress Shirt" data-price="24900" data-id="13" data-image="images/products/p13_dress_shirt.jpg">
+                    <div class="card-glare"></div>
+                    <div class="product-image">
+                        <div class="product-visual">
+                            <img src="images/products/p13_dress_shirt.jpg" alt="Formal Dress Shirt" class="product-img" loading="lazy">
+                        </div>
+                        <div class="product-badges"><span class="badge-tag new">New</span></div>
+                        <div class="product-actions-overlay">
+                            <button class="action-btn wishlist-add" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Formal Wear</span>
+                        <h3 class="product-name">Formal Dress Shirt</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-count">(155)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">PKR 24,900</span>
+                            
+                        </div>
+                        <button class="add-to-cart" data-id="13" data-name="Formal Dress Shirt" data-price="24900" data-image="images/products/p13_dress_shirt.jpg">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 14 -->
+                <div class="product-card" data-category="casual" data-name="Hooded Sweatshirt" data-price="24900" data-id="14" data-image="images/products/p14_hoodie.jpg">
+                    <div class="card-glare"></div>
+                    <div class="product-image">
+                        <div class="product-visual">
+                            <img src="images/products/p14_hoodie.jpg" alt="Hooded Sweatshirt" class="product-img" loading="lazy">
+                        </div>
+                        <div class="product-badges"><span class="badge-tag bestseller">Bestseller</span></div>
+                        <div class="product-actions-overlay">
+                            <button class="action-btn wishlist-add" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Casual Wear</span>
+                        <h3 class="product-name">Hooded Sweatshirt</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-count">(312)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">PKR 24,900</span>
+                            
+                        </div>
+                        <button class="add-to-cart" data-id="14" data-name="Hooded Sweatshirt" data-price="24900" data-image="images/products/p14_hoodie.jpg">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 15 -->
+                <div class="product-card" data-category="premium" data-name="Linen Summer Shirt" data-price="27500" data-id="15" data-image="images/products/p15_linen.jpg">
+                    <div class="card-glare"></div>
+                    <div class="product-image">
+                        <div class="product-visual">
+                            <img src="images/products/p15_linen.jpg" alt="Linen Summer Shirt" class="product-img" loading="lazy">
+                        </div>
+                        <div class="product-badges"><span class="badge-tag new">New</span></div>
+                        <div class="product-actions-overlay">
+                            <button class="action-btn wishlist-add" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Premium</span>
+                        <h3 class="product-name">Linen Summer Shirt</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-count">(44)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">PKR 27,500</span>
+                            
+                        </div>
+                        <button class="add-to-cart" data-id="15" data-name="Linen Summer Shirt" data-price="27500" data-image="images/products/p15_linen.jpg">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 16 -->
+                <div class="product-card" data-category="outerwear" data-name="Athletic Track Jacket" data-price="41500" data-id="16" data-image="images/products/p16_track.jpg">
+                    <div class="card-glare"></div>
+                    <div class="product-image">
+                        <div class="product-visual">
+                            <img src="images/products/p16_track.jpg" alt="Athletic Track Jacket" class="product-img" loading="lazy">
+                        </div>
+                        <div class="product-badges"><span class="badge-tag trending">Trending</span></div>
+                        <div class="product-actions-overlay">
+                            <button class="action-btn wishlist-add" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Outerwear</span>
+                        <h3 class="product-name">Athletic Track Jacket</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-count">(119)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">PKR 41,500</span>
+                            
+                        </div>
+                        <button class="add-to-cart" data-id="16" data-name="Athletic Track Jacket" data-price="41500" data-image="images/products/p16_track.jpg">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 17 -->
+                <div class="product-card" data-category="premium" data-name="Vintage Wash Jeans" data-price="33200" data-id="17" data-image="images/products/p17_jeans.jpg">
+                    <div class="card-glare"></div>
+                    <div class="product-image">
+                        <div class="product-visual">
+                            <img src="images/products/p17_jeans.jpg" alt="Vintage Wash Jeans" class="product-img" loading="lazy">
+                        </div>
+                        <div class="product-badges"><span class="badge-tag premium-tag">Premium</span></div>
+                        <div class="product-actions-overlay">
+                            <button class="action-btn wishlist-add" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Premium</span>
+                        <h3 class="product-name">Vintage Wash Jeans</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-count">(87)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">PKR 33,200</span>
+                            
+                        </div>
+                        <button class="add-to-cart" data-id="17" data-name="Vintage Wash Jeans" data-price="33200" data-image="images/products/p17_jeans.jpg">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 18 -->
+                <div class="product-card" data-category="outerwear" data-name="Quilted Vest" data-price="35900" data-id="18" data-image="images/products/p18_vest.jpg">
+                    <div class="card-glare"></div>
+                    <div class="product-image">
+                        <div class="product-visual">
+                            <img src="images/products/p18_vest.jpg" alt="Quilted Vest" class="product-img" loading="lazy">
+                        </div>
+                        <div class="product-badges"><span class="badge-tag sale">-20%</span></div>
+                        <div class="product-actions-overlay">
+                            <button class="action-btn wishlist-add" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Outerwear</span>
+                        <h3 class="product-name">Quilted Vest</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-count">(53)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">PKR 35,900</span>
+                            <span class="original-price">PKR 44,800</span>
+                        </div>
+                        <button class="add-to-cart" data-id="18" data-name="Quilted Vest" data-price="35900" data-image="images/products/p18_vest.jpg">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROMO BANNER ===== -->
+    <section class="promo-banner">
+        <div class="promo-3d-scene">
+            <div class="promo-content">
+                <span class="promo-badge">Limited Time Offer</span>
+                <h2>Up to <em>50% OFF</em></h2>
+                <p>On selected premium items. Don't miss out on our biggest sale of the season.</p>
+                <a href="#products" class="btn btn-primary"><span>Shop Sale</span><i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon-wrap">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Free Shipping</h3>
+                    <p>On all ORDERS OVER PKR 10,000</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrap">
+                        <i class="fas fa-undo-alt"></i>
+                    </div>
+                    <h3>Easy Returns</h3>
+                    <p>30-day return policy</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrap">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure Payment</h3>
+                    <p>100% secure checkout</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrap">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Dedicated customer care</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-visual">
+                    <div class="about-card-3d">
+                        <div class="about-image" style="background: linear-gradient(rgba(10,10,14,0.4), rgba(10,10,14,0.85)), url('images/products/hero_fashion.jpg') center/cover no-repeat;">
+                            <div class="about-image-content">
+                                <div class="about-year">EST. 2020</div>
+                                <div class="about-big-text">AHAD</div>
+                                <div class="about-subtitle-text">Crafting Excellence</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-badge">Our Story</span>
+                    <h2 class="section-title">About <em>Ahad</em></h2>
+                    <p class="about-text">Founded in 2020, Ahad Clothing & Shopping Centre has become a beacon of premium fashion. We believe that clothing is more than fabric â€” it's an expression of identity, confidence, and style.</p>
+                    <p class="about-text">Every piece in our collection is meticulously crafted using the finest materials sourced from around the world. From Italian wool to Japanese denim, we spare no expense in delivering excellence.</p>
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <span class="highlight-number">500+</span>
+                            <span class="highlight-label">Unique Products</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-number">50K+</span>
+                            <span class="highlight-label">Happy Customers</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-number">25+</span>
+                            <span class="highlight-label">Countries</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== NEWSLETTER ===== -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Join the <em>AHAD</em> Family</h2>
+                <p>Subscribe to get exclusive deals, early access to new collections, and style tips delivered to your inbox.</p>
+                <form class="newsletter-form" onsubmit="return false;">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary"><span>Subscribe</span><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Get In Touch</span>
+                <h2 class="section-title">Contact <em>Us</em></h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Visit Us</h3>
+                    <p>123 Fashion Avenue<br>New York, NY 10001</p>
+                </div>
+                <div class="contact-info-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Call Us</h3>
+                    <p>+1 (555) 123-4567<br>Mon-Sat: 9AM - 9PM</p>
+                </div>
+                <div class="contact-info-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p>hello@ahadclothing.com<br>support@ahadclothing.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-name">AHAD</span>
+                        <span class="logo-tagline">Clothing & Shopping Centre</span>
+                    </div>
+                    <p>Premium clothing for the modern individual. Quality, style, and sophistication in every stitch.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Shop</a></li>
+                        <li><a href="#collections">Collections</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Payment Methods (PKR)</h4>
+                    <div class="payment-methods-list">
+                        <span class="pay-pill"><i class="fas fa-hand-holding-usd"></i> Cash on Delivery</span>
+                        <span class="pay-pill ep"><i class="fas fa-mobile-alt"></i> EasyPaisa</span>
+                        <span class="pay-pill jc"><i class="fas fa-bolt"></i> JazzCash</span>
+                        <span class="pay-pill"><i class="fab fa-cc-visa"></i> Visa</span>
+                        <span class="pay-pill"><i class="fab fa-cc-mastercard"></i> MasterCard</span>
+                        <span class="pay-pill"><i class="fas fa-university"></i> Bank Transfer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AHAD Clothing & Shopping Centre. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== CART SIDEBAR ===== -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-bag"></i> Shopping Cart</h3>
+            <button class="close-cart" id="closeCart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Your cart is empty</p>
+                <a href="#products" class="btn btn-outline"><span>Start Shopping</span></a>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display:none;">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-amount" id="cartTotal">PKR 0</span>
+            </div>
+            <button class="btn btn-primary checkout-btn"><span>Checkout</span><i class="fas fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <!-- ===== QUICK VIEW MODAL ===== -->
+    <div class="modal-overlay" id="quickViewOverlay"></div>
+    <div class="quick-view-modal" id="quickViewModal">
+        <button class="modal-close" id="closeModal"><i class="fas fa-times"></i></button>
+        <div class="modal-content">
+            <div class="modal-image" id="modalImage"></div>
+            <div class="modal-info">
+                <span class="modal-category" id="modalCategory"></span>
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <div class="modal-rating" id="modalRating"></div>
+                <p class="modal-price" id="modalPrice"></p>
+                <p class="modal-desc">Premium quality fabric with expert craftsmanship. Perfect fit guaranteed with our precise sizing system. Available in multiple sizes.</p>
+                <div class="modal-sizes">
+                    <span class="size-label">Size:</span>
+                    <div class="size-options">
+                        <button class="size-btn">XS</button>
+                        <button class="size-btn active">S</button>
+                        <button class="size-btn">M</button>
+                        <button class="size-btn">L</button>
+                        <button class="size-btn">XL</button>
+                    </div>
+                </div>
+                <div class="modal-quantity">
+                    <span class="qty-label">Quantity:</span>
+                    <div class="qty-control">
+                        <button class="qty-btn minus">-</button>
+                        <span class="qty-value">1</span>
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                </div>
+                <button class="btn btn-primary modal-add-cart"><i class="fas fa-shopping-bag"></i> <span>Add to Cart</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== CHECKOUT / PAYMENT MODAL ===== -->
+    <div class="checkout-overlay" id="checkoutOverlay"></div>
+    <div class="checkout-modal" id="checkoutModal">
+        <button class="checkout-close" id="checkoutClose" aria-label="Close Checkout"><i class="fas fa-times"></i></button>
+        
+        <div class="checkout-container">
+            <div class="checkout-header">
+                <div class="checkout-brand">
+                    <span class="logo-name">AHAD</span>
+                    <span class="logo-tagline">Secure Checkout</span>
+                </div>
+                <div class="checkout-steps">
+                    <div class="step active" data-step="1">
+                        <span class="step-num">1</span>
+                        <span class="step-text">Shipping</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step" data-step="2">
+                        <span class="step-num">2</span>
+                        <span class="step-text">Payment</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step" data-step="3">
+                        <span class="step-num">3</span>
+                        <span class="step-text">Confirm</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkout-body">
+                <!-- STEP 1: Shipping Details -->
+                <div class="checkout-step-content" id="step1">
+                    <h3 class="step-title"><i class="fas fa-map-marker-alt"></i> Shipping Address (Pakistan)</h3>
+                    <p class="step-desc">Enter your delivery details for courier dispatch</p>
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label>Full Name *</label>
+                            <input type="text" id="shipName" placeholder="e.g. Muhammad Ahad" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Mobile / WhatsApp Number *</label>
+                            <input type="tel" id="shipPhone" placeholder="0300-1234567" required>
+                        </div>
+                        <div class="form-group">
+                            <label>City *</label>
+                            <select id="shipCity" required>
+                                <option value="">Select City</option>
+                                <option value="Karachi">Karachi</option>
+                                <option value="Lahore">Lahore</option>
+                                <option value="Islamabad">Islamabad</option>
+                                <option value="Rawalpindi">Rawalpindi</option>
+                                <option value="Faisalabad">Faisalabad</option>
+                                <option value="Multan">Multan</option>
+                                <option value="Peshawar">Peshawar</option>
+                                <option value="Quetta">Quetta</option>
+                                <option value="Sialkot">Sialkot</option>
+                                <option value="Gujranwala">Gujranwala</option>
+                                <option value="Hyderabad">Hyderabad</option>
+                                <option value="Other">Other City</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Complete Street Address *</label>
+                            <textarea id="shipAddress" rows="2" placeholder="House / Flat No, Street, Sector / Area" required></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Order Note (Optional)</label>
+                            <input type="text" id="shipNote" placeholder="Special delivery instructions">
+                        </div>
+                    </div>
+                    <div class="checkout-actions">
+                        <button class="btn btn-outline" onclick="closeCheckout()">Cancel</button>
+                        <button class="btn btn-primary" onclick="nextStep(2)">Proceed to Payment <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- STEP 2: Payment Method Selection -->
+                <div class="checkout-step-content" id="step2" style="display:none;">
+                    <h3 class="step-title"><i class="fas fa-wallet"></i> Choose Payment Method</h3>
+                    <p class="step-desc">All transactions are encrypted and 100% secure in PKR</p>
+                    
+                    <div class="payment-options-grid">
+                        <!-- EasyPaisa -->
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="easypaisa">
+                            <div class="payment-card-inner">
+                                <div class="payment-icon-badge ep-badge">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="payment-meta">
+                                    <strong>EasyPaisa Mobile Wallet</strong>
+                                    <span>Instant transfer via EasyPaisa app or account</span>
+                                </div>
+                                <span class="method-tag">Instant</span>
+                            </div>
+                        </label>
+
+                        <!-- JazzCash -->
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="jazzcash">
+                            <div class="payment-card-inner">
+                                <div class="payment-icon-badge jc-badge">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <div class="payment-meta">
+                                    <strong>JazzCash Mobile Account</strong>
+                                    <span>Pay directly through JazzCash wallet / OTC</span>
+                                </div>
+                                <span class="method-tag">Instant</span>
+                            </div>
+                        </label>
+
+                        <!-- Cash on Delivery (COD) -->
+                        <label class="payment-option active">
+                            <input type="radio" name="payment" value="cod" checked>
+                            <div class="payment-card-inner">
+                                <div class="payment-icon-badge cod-badge">
+                                    <i class="fas fa-hand-holding-usd"></i>
+                                </div>
+                                <div class="payment-meta">
+                                    <strong>Cash on Delivery (COD)</strong>
+                                    <span>Pay cash upon delivery to the courier rider</span>
+                                </div>
+                                <span class="method-tag popular">Most Popular</span>
+                            </div>
+                        </label>
+
+                        <!-- Credit/Debit Card -->
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="card">
+                            <div class="payment-card-inner">
+                                <div class="payment-icon-badge card-badge">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <div class="payment-meta">
+                                    <strong>Credit / Debit Card</strong>
+                                    <span>Visa, MasterCard, UnionPay, PayPak</span>
+                                </div>
+                                <span class="method-tag">Secure 3D</span>
+                            </div>
+                        </label>
+
+                        <!-- Bank Transfer -->
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="bank">
+                            <div class="payment-card-inner">
+                                <div class="payment-icon-badge bank-badge">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div class="payment-meta">
+                                    <strong>Online Bank Transfer (IBFT)</strong>
+                                    <span>Meezan, HBL, Bank Alfalah, UBL</span>
+                                </div>
+                                <span class="method-tag">IBFT</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Dynamic Card Details Box -->
+                    <div id="cardDetails" class="payment-detail-box" style="display:none;">
+                        <h4><i class="fas fa-credit-card"></i> Card Information</h4>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label>Cardholder Name</label>
+                                <input type="text" placeholder="Name on card">
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Card Number</label>
+                                <input type="text" placeholder="0000 0000 0000 0000" maxlength="19">
+                            </div>
+                            <div class="form-group">
+                                <label>Expiry Date</label>
+                                <input type="text" placeholder="MM/YY" maxlength="5">
+                            </div>
+                            <div class="form-group">
+                                <label>CVV / CVC</label>
+                                <input type="password" placeholder="123" maxlength="4">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Wallet Details Box -->
+                    <div id="walletDetails" class="payment-detail-box" style="display:none;">
+                        <h4><i class="fas fa-mobile-alt"></i> Mobile Account Verification</h4>
+                        <div class="form-group full-width">
+                            <label>Registered Mobile Number</label>
+                            <input type="tel" placeholder="03XX-XXXXXXX">
+                        </div>
+                        <p class="wallet-hint">A payment prompt will be sent to your mobile wallet for PIN authorization upon order placement.</p>
+                    </div>
+
+                    <!-- Dynamic Bank Details Box -->
+                    <div id="bankDetails" class="payment-detail-box" style="display:none;">
+                        <h4><i class="fas fa-university"></i> AHAD Official Bank Account</h4>
+                        <div class="bank-info-table">
+                            <div class="bank-row"><span>Bank Name:</span> <strong>Meezan Bank Limited</strong></div>
+                            <div class="bank-row"><span>Account Title:</span> <strong>AHAD CLOTHING CENTRE</strong></div>
+                            <div class="bank-row"><span>Account No:</span> <strong>0101-0234567890</strong></div>
+                            <div class="bank-row"><span>IBAN:</span> <strong>PK36MEZN0001010234567890</strong></div>
+                        </div>
+                        <p class="wallet-hint">Please share your transaction reference ID or screenshot via WhatsApp to confirm dispatch.</p>
+                    </div>
+
+                    <div class="checkout-actions">
+                        <button class="btn btn-outline" onclick="nextStep(1)"><i class="fas fa-arrow-left"></i> Back</button>
+                        <button class="btn btn-primary" onclick="nextStep(3)">Review Order <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- STEP 3: Order Review & Confirmation -->
+                <div class="checkout-step-content" id="step3" style="display:none;">
+                    <h3 class="step-title"><i class="fas fa-check-circle"></i> Review & Place Order</h3>
+                    <p class="step-desc">Verify your selected items and pricing</p>
+
+                    <div class="order-summary-box">
+                        <div class="order-summary-list" id="orderSummary">
+                            <!-- Injected by JS -->
+                        </div>
+
+                        <div class="order-totals-table">
+                            <div class="totals-row">
+                                <span>Subtotal</span>
+                                <strong id="orderSubtotal">PKR 0</strong>
+                            </div>
+                            <div class="totals-row">
+                                <span>Nationwide Courier Shipping</span>
+                                <strong id="orderShipping">FREE</strong>
+                            </div>
+                            <div class="totals-row grand-total">
+                                <span>Total Amount (PKR)</span>
+                                <strong class="gold-price" id="orderTotal">PKR 0</strong>
+                            </div>
+                        </div>
+
+                        <div class="security-badge-banner">
+                            <i class="fas fa-shield-check"></i>
+                            <span>100% Buyer Protection • 30-Day Easy Exchange Policy Across Pakistan</span>
+                        </div>
+                    </div>
+
+                    <div class="checkout-actions">
+                        <button class="btn btn-outline" onclick="nextStep(2)"><i class="fas fa-arrow-left"></i> Back</button>
+                        <button class="btn btn-primary place-order-btn" onclick="placeOrder()">
+                            <i class="fas fa-lock"></i> Place Order Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SUCCESS STEP -->
+                <div class="checkout-step-content success-step" id="stepSuccess" style="display:none;">
+                    <div class="success-icon-wrap">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h2>Thank You For Your Order!</h2>
+                    <p class="order-id-label">Your Order Tracking ID: <strong id="orderId">AHAD-0000</strong></p>
+                    <p class="success-msg">We have received your order at <strong>AHAD Clothing & Shopping Centre</strong>. A confirmation SMS/WhatsApp message has been sent. Your items will be dispatched within 24 hours.</p>
+                    <div class="success-features">
+                        <div class="sf-item"><i class="fas fa-shipping-fast"></i> 2-4 Days Delivery</div>
+                        <div class="sf-item"><i class="fas fa-box-open"></i> Inspection Allowed</div>
+                        <div class="sf-item"><i class="fas fa-headset"></i> 24/7 WhatsApp Support</div>
+                    </div>
+                    <button class="btn btn-primary" onclick="closeCheckout()">
+                        <span>Continue Shopping</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== TOAST NOTIFICATION ===== -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Item added to cart!</span>
+    </div>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
